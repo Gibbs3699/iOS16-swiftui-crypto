@@ -11,6 +11,7 @@
 		DC04C596292699A500ADC87C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C595292699A500ADC87C /* ContentView.swift */; };
 		DC04C598292699A800ADC87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC04C597292699A800ADC87C /* Assets.xcassets */; };
 		DC04C59B292699A800ADC87C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC04C59A292699A800ADC87C /* Preview Assets.xcassets */; };
+		DC04C5A329291B1800ADC87C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5A229291B1800ADC87C /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		DC04C595292699A500ADC87C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC04C597292699A800ADC87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC04C59A292699A800ADC87C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC04C5A229291B1800ADC87C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		DC04C592292699A500ADC87C /* SwiftUI Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				DC04C5A129291AFD00ADC87C /* Extensions */,
 				DC04C593292699A500ADC87C /* SwiftUI_CryptoApp.swift */,
 				DC04C595292699A500ADC87C /* ContentView.swift */,
 				DC04C597292699A800ADC87C /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				DC04C59A292699A800ADC87C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DC04C5A129291AFD00ADC87C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC04C5A229291B1800ADC87C /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				DC04C596292699A500ADC87C /* ContentView.swift in Sources */,
 				DC04C594292699A500ADC87C /* SwiftUI_CryptoApp.swift in Sources */,
+				DC04C5A329291B1800ADC87C /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
