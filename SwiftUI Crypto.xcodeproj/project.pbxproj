@@ -14,6 +14,7 @@
 		DC04C5A329291B1800ADC87C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5A229291B1800ADC87C /* Color.swift */; };
 		DC04C5A9292A892B00ADC87C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5A8292A892B00ADC87C /* HomeView.swift */; };
 		DC04C5AD292BB01A00ADC87C /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5AC292BB01A00ADC87C /* CircleButtonView.swift */; };
+		DC04C5AF292BB54300ADC87C /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5AE292BB54300ADC87C /* CircleButtonAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		DC04C5A229291B1800ADC87C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DC04C5A8292A892B00ADC87C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DC04C5AC292BB01A00ADC87C /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		DC04C5AE292BB54300ADC87C /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				DC04C5AC292BB01A00ADC87C /* CircleButtonView.swift */,
+				DC04C5AE292BB54300ADC87C /* CircleButtonAnimationView.swift */,
 			);
 			path = CircleButton;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				DC04C594292699A500ADC87C /* SwiftUI_CryptoApp.swift in Sources */,
 				DC04C5AD292BB01A00ADC87C /* CircleButtonView.swift in Sources */,
 				DC04C5A329291B1800ADC87C /* Color.swift in Sources */,
+				DC04C5AF292BB54300ADC87C /* CircleButtonAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
