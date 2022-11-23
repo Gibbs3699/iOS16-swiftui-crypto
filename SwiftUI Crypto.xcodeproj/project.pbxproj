@@ -16,6 +16,7 @@
 		DC04C5AD292BB01A00ADC87C /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5AC292BB01A00ADC87C /* CircleButtonView.swift */; };
 		DC04C5AF292BB54300ADC87C /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5AE292BB54300ADC87C /* CircleButtonAnimationView.swift */; };
 		DC04C5B2292D19C300ADC87C /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5B1292D19C300ADC87C /* CoinModel.swift */; };
+		DC04C5B4292E636B00ADC87C /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5B3292E636B00ADC87C /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		DC04C5AC292BB01A00ADC87C /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		DC04C5AE292BB54300ADC87C /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		DC04C5B1292D19C300ADC87C /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		DC04C5B3292E636B00ADC87C /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				DC04C5A229291B1800ADC87C /* Color.swift */,
+				DC04C5B3292E636B00ADC87C /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				DC04C594292699A500ADC87C /* SwiftUI_CryptoApp.swift in Sources */,
 				DC04C5AD292BB01A00ADC87C /* CircleButtonView.swift in Sources */,
 				DC04C5A329291B1800ADC87C /* Color.swift in Sources */,
+				DC04C5B4292E636B00ADC87C /* PreviewProvider.swift in Sources */,
 				DC04C5AF292BB54300ADC87C /* CircleButtonAnimationView.swift in Sources */,
 				DC04C5B2292D19C300ADC87C /* CoinModel.swift in Sources */,
 			);
