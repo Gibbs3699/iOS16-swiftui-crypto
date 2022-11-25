@@ -28,13 +28,13 @@ struct CoinRowView: View {
             
             Spacer()
             
-//            VStack {
-//                Text("\(coin.currentPrice.asCurrencyWith6Decimals())")
-//                    .bold()
-//                    .foregroundColor(Color.theme.accent)
-//                Text("\(coin.priceChangePercentage24H.asPercentString())")
-//                    .foregroundColor(coin.priceChangePercentage24H ?? 0.00 >= 0 ? Color.theme.green : Color.theme.red)
-//            }
+            VStack {
+                Text(coin.currentPrice.asCurrencyWith6Decimals())
+                    .bold()
+                    .foregroundColor(Color.theme.accent)
+                Text(coin.priceChangePercentage24H?.asPercentString() ?? "0.00%")
+                    .foregroundColor(coin.priceChangePercentage24H ?? 0.00 >= 0 ? Color.theme.green : Color.theme.red)
+            }
         }
     }
 }
