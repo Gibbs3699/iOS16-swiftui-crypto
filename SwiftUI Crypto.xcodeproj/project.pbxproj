@@ -19,6 +19,7 @@
 		DC04C5B4292E636B00ADC87C /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5B3292E636B00ADC87C /* PreviewProvider.swift */; };
 		DC04C5B6292E685C00ADC87C /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5B5292E685C00ADC87C /* CoinRowView.swift */; };
 		DC04C5B8292FBB2C00ADC87C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5B7292FBB2C00ADC87C /* Double.swift */; };
+		DC04C5BA2934D9C300ADC87C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04C5B92934D9C300ADC87C /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		DC04C5B3292E636B00ADC87C /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		DC04C5B5292E685C00ADC87C /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		DC04C5B7292FBB2C00ADC87C /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		DC04C5B92934D9C300ADC87C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		DC04C5A6292A88FA00ADC87C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DC04C5B92934D9C300ADC87C /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC04C5B6292E685C00ADC87C /* CoinRowView.swift in Sources */,
+				DC04C5BA2934D9C300ADC87C /* HomeViewModel.swift in Sources */,
 				DC04C596292699A500ADC87C /* ContentView.swift in Sources */,
 				DC04C5A9292A892B00ADC87C /* HomeView.swift in Sources */,
 				DC04C594292699A500ADC87C /* SwiftUI_CryptoApp.swift in Sources */,
