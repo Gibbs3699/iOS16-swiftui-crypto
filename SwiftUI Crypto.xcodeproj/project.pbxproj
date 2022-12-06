@@ -23,6 +23,7 @@
 		DCFE6E1C2937A68600C4F23E /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E1B2937A68600C4F23E /* CoinDataService.swift */; };
 		DCFE6E1F2939FA4100C4F23E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E1E2939FA4100C4F23E /* NetworkingManager.swift */; };
 		DCFE6E22293F957400C4F23E /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E21293F957400C4F23E /* CoinImageView.swift */; };
+		DCFE6E24293F970700C4F23E /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E23293F970700C4F23E /* CoinImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		DCFE6E1B2937A68600C4F23E /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		DCFE6E1E2939FA4100C4F23E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		DCFE6E21293F957400C4F23E /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		DCFE6E23293F970700C4F23E /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				DCFE6E1B2937A68600C4F23E /* CoinDataService.swift */,
+				DCFE6E23293F970700C4F23E /* CoinImageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				DC04C5B4292E636B00ADC87C /* PreviewProvider.swift in Sources */,
 				DC04C5AF292BB54300ADC87C /* CircleButtonAnimationView.swift in Sources */,
 				DC04C5B8292FBB2C00ADC87C /* Double.swift in Sources */,
+				DCFE6E24293F970700C4F23E /* CoinImageService.swift in Sources */,
 				DC04C5B2292D19C300ADC87C /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
