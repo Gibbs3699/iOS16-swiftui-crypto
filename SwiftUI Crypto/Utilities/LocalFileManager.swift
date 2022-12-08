@@ -24,7 +24,14 @@ class LocalFileManager {
         } catch let error {
             print("Error saving image. ImageName: \(imageName). \(error)")
         }
-        
+    }
+    
+    func getImage(imageName: String, folderName: String) -> UIImage? {
+        guard let url = getURLForImage(imageName: imageName, folderName: folderName),
+              FileManager.default.fileExists(atPath: url.path) else {
+            return nil
+        }
+        return UIImage(contentsOfFile: url.path)
     }
     
     private func createFolderIfNeeded(folderName: String) {
