@@ -21,7 +21,7 @@ class CoinImageService {
     
     init(coin: CoinModel) {
         self.coin = coin
-        self.imageName = coin.image
+        self.imageName = coin.id
         getCoinImage()
     }
     
