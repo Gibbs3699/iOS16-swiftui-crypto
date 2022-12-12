@@ -20,6 +20,7 @@ struct HomeView: View {
             VStack {
                 homeHeader
                 columnTitles
+                SearchBarView(searchText: $vm.searchText)
                 
                 if !showProfile {
                     allCoinList
