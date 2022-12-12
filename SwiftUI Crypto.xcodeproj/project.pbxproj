@@ -27,6 +27,7 @@
 		DCFE6E26293F986400C4F23E /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E25293F986400C4F23E /* CoinImageViewModel.swift */; };
 		DCFE6E422940F32500C4F23E /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E412940F32500C4F23E /* LocalFileManager.swift */; };
 		DCFE6E472944E94700C4F23E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E462944E94700C4F23E /* SearchBarView.swift */; };
+		DCFE6E49294776D700C4F23E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E48294776D700C4F23E /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		DCFE6E25293F986400C4F23E /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 		DCFE6E412940F32500C4F23E /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		DCFE6E462944E94700C4F23E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		DCFE6E48294776D700C4F23E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				DC04C5A229291B1800ADC87C /* Color.swift */,
 				DC04C5B3292E636B00ADC87C /* PreviewProvider.swift */,
 				DC04C5B7292FBB2C00ADC87C /* Double.swift */,
+				DCFE6E48294776D700C4F23E /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				DC04C5A9292A892B00ADC87C /* HomeView.swift in Sources */,
 				DCFE6E22293F957400C4F23E /* CoinImageView.swift in Sources */,
 				DC04C594292699A500ADC87C /* SwiftUI_CryptoApp.swift in Sources */,
+				DCFE6E49294776D700C4F23E /* UIApplication.swift in Sources */,
 				DC04C5AD292BB01A00ADC87C /* CircleButtonView.swift in Sources */,
 				DC04C5A329291B1800ADC87C /* Color.swift in Sources */,
 				DCFE6E472944E94700C4F23E /* SearchBarView.swift in Sources */,
