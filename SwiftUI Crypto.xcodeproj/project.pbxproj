@@ -28,6 +28,7 @@
 		DCFE6E422940F32500C4F23E /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E412940F32500C4F23E /* LocalFileManager.swift */; };
 		DCFE6E472944E94700C4F23E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E462944E94700C4F23E /* SearchBarView.swift */; };
 		DCFE6E49294776D700C4F23E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E48294776D700C4F23E /* UIApplication.swift */; };
+		DCFE6E4B2948DDBA00C4F23E /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E4A2948DDBA00C4F23E /* StatisticModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		DCFE6E412940F32500C4F23E /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		DCFE6E462944E94700C4F23E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		DCFE6E48294776D700C4F23E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		DCFE6E4A2948DDBA00C4F23E /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				DC04C5B1292D19C300ADC87C /* CoinModel.swift */,
+				DCFE6E4A2948DDBA00C4F23E /* StatisticModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCFE6E4B2948DDBA00C4F23E /* StatisticModel.swift in Sources */,
 				DCFE6E1C2937A68600C4F23E /* CoinDataService.swift in Sources */,
 				DC04C5B6292E685C00ADC87C /* CoinRowView.swift in Sources */,
 				DC04C5BA2934D9C300ADC87C /* HomeViewModel.swift in Sources */,
