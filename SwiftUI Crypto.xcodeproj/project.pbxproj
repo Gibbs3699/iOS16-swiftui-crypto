@@ -29,6 +29,7 @@
 		DCFE6E472944E94700C4F23E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E462944E94700C4F23E /* SearchBarView.swift */; };
 		DCFE6E49294776D700C4F23E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E48294776D700C4F23E /* UIApplication.swift */; };
 		DCFE6E4B2948DDBA00C4F23E /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E4A2948DDBA00C4F23E /* StatisticModel.swift */; };
+		DCFE6E4E294A270E00C4F23E /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E4D294A270E00C4F23E /* StatisticView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		DCFE6E462944E94700C4F23E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		DCFE6E48294776D700C4F23E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		DCFE6E4A2948DDBA00C4F23E /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		DCFE6E4D294A270E00C4F23E /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		DC04C5AA292BAFF600ADC87C /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DCFE6E4C294A26EA00C4F23E /* StatisticView */,
 				DCFE6E432944E91E00C4F23E /* SearchBar */,
 				DCFE6E20293F956200C4F23E /* CoinImage */,
 				DC04C5AB292BB00800ADC87C /* CircleButton */,
@@ -215,6 +218,14 @@
 				DCFE6E462944E94700C4F23E /* SearchBarView.swift */,
 			);
 			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		DCFE6E4C294A26EA00C4F23E /* StatisticView */ = {
+			isa = PBXGroup;
+			children = (
+				DCFE6E4D294A270E00C4F23E /* StatisticView.swift */,
+			);
+			path = StatisticView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 				DC04C596292699A500ADC87C /* ContentView.swift in Sources */,
 				DCFE6E422940F32500C4F23E /* LocalFileManager.swift in Sources */,
 				DC04C5A9292A892B00ADC87C /* HomeView.swift in Sources */,
+				DCFE6E4E294A270E00C4F23E /* StatisticView.swift in Sources */,
 				DCFE6E22293F957400C4F23E /* CoinImageView.swift in Sources */,
 				DC04C594292699A500ADC87C /* SwiftUI_CryptoApp.swift in Sources */,
 				DCFE6E49294776D700C4F23E /* UIApplication.swift in Sources */,
