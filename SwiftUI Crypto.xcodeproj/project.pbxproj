@@ -30,6 +30,7 @@
 		DCFE6E49294776D700C4F23E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E48294776D700C4F23E /* UIApplication.swift */; };
 		DCFE6E4B2948DDBA00C4F23E /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E4A2948DDBA00C4F23E /* StatisticModel.swift */; };
 		DCFE6E4E294A270E00C4F23E /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E4D294A270E00C4F23E /* StatisticView.swift */; };
+		DCFE6E50294B7A1700C4F23E /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E4F294B7A1700C4F23E /* HomeStatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		DCFE6E48294776D700C4F23E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		DCFE6E4A2948DDBA00C4F23E /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		DCFE6E4D294A270E00C4F23E /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		DCFE6E4F294B7A1700C4F23E /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				DC04C5A8292A892B00ADC87C /* HomeView.swift */,
+				DCFE6E4F294B7A1700C4F23E /* HomeStatsView.swift */,
 				DC04C5B5292E685C00ADC87C /* CoinRowView.swift */,
 			);
 			path = View;
@@ -313,6 +316,7 @@
 				DC04C5A329291B1800ADC87C /* Color.swift in Sources */,
 				DCFE6E472944E94700C4F23E /* SearchBarView.swift in Sources */,
 				DCFE6E1F2939FA4100C4F23E /* NetworkingManager.swift in Sources */,
+				DCFE6E50294B7A1700C4F23E /* HomeStatsView.swift in Sources */,
 				DC04C5B4292E636B00ADC87C /* PreviewProvider.swift in Sources */,
 				DCFE6E26293F986400C4F23E /* CoinImageViewModel.swift in Sources */,
 				DC04C5AF292BB54300ADC87C /* CircleButtonAnimationView.swift in Sources */,
