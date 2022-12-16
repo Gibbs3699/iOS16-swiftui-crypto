@@ -14,8 +14,12 @@ struct HomeStatsView: View {
     
     var body: some View {
         HStack {
-            Text("test")
+            ForEach(vm.statistics) { stat in
+                StatisticView(stat: stat)
+                    .frame(width: UIScreen.main.bounds.width / 3)
+            }
         }
+        .frame(width: UIScreen.main.bounds.width, alignment: showProfile ? .trailing : .leading)
     }
 }
 
