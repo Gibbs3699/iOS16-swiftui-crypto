@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC075014294E19A700BB3534 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC075013294E19A700BB3534 /* Colors.swift */; };
 		DCFE6E34293F9B8800C4F23E /* SwiftUI_Crypto_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E33293F9B8800C4F23E /* SwiftUI_Crypto_2App.swift */; };
 		DCFE6E36293F9B8800C4F23E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E35293F9B8800C4F23E /* ContentView.swift */; };
 		DCFE6E38293F9B8B00C4F23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFE6E37293F9B8B00C4F23E /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC075013294E19A700BB3534 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DCFE6E30293F9B8800C4F23E /* SwiftUI Crypto#2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Crypto#2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFE6E33293F9B8800C4F23E /* SwiftUI_Crypto_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Crypto_2App.swift; sourceTree = "<group>"; };
 		DCFE6E35293F9B8800C4F23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC075012294E197300BB3534 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC075013294E19A700BB3534 /* Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DCFE6E27293F9B8800C4F23E = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		DCFE6E32293F9B8800C4F23E /* SwiftUI Crypto#2 */ = {
 			isa = PBXGroup;
 			children = (
+				DC075012294E197300BB3534 /* Extensions */,
 				DCFE6E33293F9B8800C4F23E /* SwiftUI_Crypto_2App.swift */,
 				DCFE6E35293F9B8800C4F23E /* ContentView.swift */,
 				DCFE6E37293F9B8B00C4F23E /* Assets.xcassets */,
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFE6E36293F9B8800C4F23E /* ContentView.swift in Sources */,
+				DC075014294E19A700BB3534 /* Colors.swift in Sources */,
 				DCFE6E34293F9B8800C4F23E /* SwiftUI_Crypto_2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
