@@ -67,7 +67,7 @@ extension CoinRowView {
     }
     
     private var rightColumn: some View {
-        VStack(alignment: .trailing) {
+        VStack(alignment: .trailing, spacing: 5.0) {
             Text(coin.currentPrice.asCurrencyWith6Decimals())
                 .bold()
                 .foregroundColor(Color.theme.accent)
