@@ -10,25 +10,30 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
-    @State private var showProfile: Bool = false
+    @State private var showPortfolio: Bool = false
+    @State private var showPortfolioView: Bool = false
     
     var body: some View {
         ZStack {
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $showPortfolioView, content: {
+                    PortfolioView()
+                        .environmentObject(vm)
+                })
             
             VStack {
                 homeHeader
-                HomeStatsView(showProfile: $showProfile)
+                HomeStatsView(showProfile: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
                 columnTitles
                 
-                if !showProfile {
+                if !showPortfolio {
                     allCoinList
                         .transition(.move(edge: .leading))
                 }
                 
-                if showProfile {
+                if showPortfolio {
                     portfolioList
                         .transition(.move(edge: .trailing))
                 }
@@ -53,15 +58,20 @@ extension HomeView {
     
     private var homeHeader: some View {
         HStack {
-            CircleButtonView(iconName: showProfile ? "plus" : "info")
+            CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none, value: 0)
+                .onTapGesture {
+                    if showPortfolio {
+                        showPortfolioView.toggle()
+                    }
+                }
                 .background(
-                    CircleButtonAnimationView(animate: $showProfile)
+                    CircleButtonAnimationView(animate: $showPortfolio)
                 )
             
             Spacer()
 
-            Text(showProfile ? "Portfolio" : "Live Prices")
+            Text(showPortfolio ? "Portfolio" : "Live Prices")
                 .font(.headline)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.theme.accent)
@@ -70,10 +80,10 @@ extension HomeView {
             Spacer()
             
             CircleButtonView(iconName: "chevron.right")
-                .rotationEffect(Angle(degrees: showProfile ? 180 : 0))
+                .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
                 .onTapGesture {
                     withAnimation(.spring()) {
-                        showProfile.toggle()
+                        showPortfolio.toggle()
                     }
                 }
         }
@@ -104,7 +114,7 @@ extension HomeView {
         HStack {
             Text("Coin")
             Spacer()
-            if showProfile {
+            if showPortfolio {
                 Text("Holdings")
             }
             
