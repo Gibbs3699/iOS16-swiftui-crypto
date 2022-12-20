@@ -23,6 +23,7 @@
 		DC075016294F722800BB3534 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC075015294F722800BB3534 /* MarketDataModel.swift */; };
 		DC07501A294F7BF200BB3534 /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC075019294F7BF200BB3534 /* MarketDataService.swift */; };
 		DC9B67B02952102E00FBD66A /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9B67AF2952102E00FBD66A /* PortfolioView.swift */; };
+		DC9B67B32952130000FBD66A /* XmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9B67B22952130000FBD66A /* XmarkButton.swift */; };
 		DCFE6E1C2937A68600C4F23E /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E1B2937A68600C4F23E /* CoinDataService.swift */; };
 		DCFE6E1F2939FA4100C4F23E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E1E2939FA4100C4F23E /* NetworkingManager.swift */; };
 		DCFE6E22293F957400C4F23E /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFE6E21293F957400C4F23E /* CoinImageView.swift */; };
@@ -54,6 +55,7 @@
 		DC075015294F722800BB3534 /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
 		DC075019294F7BF200BB3534 /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		DC9B67AF2952102E00FBD66A /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		DC9B67B22952130000FBD66A /* XmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmarkButton.swift; sourceTree = "<group>"; };
 		DCFE6E1B2937A68600C4F23E /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		DCFE6E1E2939FA4100C4F23E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		DCFE6E21293F957400C4F23E /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		DC04C5AA292BAFF600ADC87C /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DC9B67B1295212D100FBD66A /* XmarkButton */,
 				DCFE6E4C294A26EA00C4F23E /* StatisticView */,
 				DCFE6E432944E91E00C4F23E /* SearchBar */,
 				DCFE6E20293F956200C4F23E /* CoinImage */,
@@ -195,6 +198,14 @@
 				DC075015294F722800BB3534 /* MarketDataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DC9B67B1295212D100FBD66A /* XmarkButton */ = {
+			isa = PBXGroup;
+			children = (
+				DC9B67B22952130000FBD66A /* XmarkButton.swift */,
+			);
+			path = XmarkButton;
 			sourceTree = "<group>";
 		};
 		DCFE6E1A2937A66D00C4F23E /* Service */ = {
@@ -327,6 +338,7 @@
 				DCFE6E472944E94700C4F23E /* SearchBarView.swift in Sources */,
 				DCFE6E1F2939FA4100C4F23E /* NetworkingManager.swift in Sources */,
 				DCFE6E50294B7A1700C4F23E /* HomeStatsView.swift in Sources */,
+				DC9B67B32952130000FBD66A /* XmarkButton.swift in Sources */,
 				DC07501A294F7BF200BB3534 /* MarketDataService.swift in Sources */,
 				DC04C5B4292E636B00ADC87C /* PreviewProvider.swift in Sources */,
 				DCFE6E26293F986400C4F23E /* CoinImageViewModel.swift in Sources */,
