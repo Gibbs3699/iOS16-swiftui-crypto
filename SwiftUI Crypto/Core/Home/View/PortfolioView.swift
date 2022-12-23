@@ -20,7 +20,9 @@ struct PortfolioView: View {
                     ScrollView(.horizontal, showsIndicators: false, content: {
                         LazyHStack(spacing: 10) {
                             ForEach(vm.allCoins) { coin in
-                                Text(coin.symbol.uppercased())
+                                CoinLogoView(coin: coin)
+                                    .frame(width: 75)
+                                    .padding(4)
                             }
                         }
                     })
