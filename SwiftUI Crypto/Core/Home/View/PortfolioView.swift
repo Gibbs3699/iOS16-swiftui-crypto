@@ -11,14 +11,41 @@ struct PortfolioView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
     @State private var selectedCoin: CoinModel? = nil
+    @State private var quantityText: String = ""
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0.0) {
                     SearchBarView(searchText: $vm.searchText)
-                    
                     coinLogoList
+                    
+                    if selectedCoin != nil {
+                        VStack(spacing: 20) {
+                            HStack {
+                                Text("Current price of \(selectedCoin?.symbol.uppercased() ?? ""):")
+                                Spacer()
+                                Text(selectedCoin?.currentPrice.asCurrencyWith6Decimals() ?? "")
+                            }
+                            Divider()
+                            HStack {
+                                Text("Amount in your portfolio")
+                                Spacer()
+                                TextField("Ex: 1.4", text: $quantityText)
+                                    .multilineTextAlignment(.trailing)
+                                    .keyboardType(.decimalPad)
+                            }
+                            Divider()
+                            HStack {
+                                Text("Current value:")
+                                Spacer()
+                                Text("")
+                            }
+                        }
+                        .animation(.none)
+                        .padding()
+                        .font(.headline)
+                    }
                 }
             }
             .navigationTitle("Edit Portfolio")
