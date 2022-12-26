@@ -60,8 +60,15 @@ struct PortfolioView: View {
 
 struct PortfolioView_Previews: PreviewProvider {
     static var previews: some View {
-        PortfolioView()
-            .environmentObject(dev.homeVM)
+        Group {
+            PortfolioView()
+                .environmentObject(dev.homeVM)
+            
+            PortfolioView()
+                .environmentObject(dev.homeVM)
+                .preferredColorScheme(.dark)
+        }
+            
     }
 }
 
@@ -81,11 +88,11 @@ extension PortfolioView {
                         }
                         .background(
                            RoundedRectangle(cornerRadius: 10)
-                            .stroke(selectedCoin?.id == coin.id ? Color.theme.accent : Color.clear, lineWidth: 3)
+                            .foregroundColor(selectedCoin?.id == coin.id ? Color.theme.accent.opacity(0.15) : Color.clear)
                         )
                 }
             }
-            .padding(.vertical, 4)
+            .frame(height: 120)
             .padding(.leading)
         })
     }
