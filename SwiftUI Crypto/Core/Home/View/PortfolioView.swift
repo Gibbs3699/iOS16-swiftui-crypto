@@ -39,7 +39,7 @@ struct PortfolioView: View {
                             HStack {
                                 Text("Current value:")
                                 Spacer()
-                                Text("")
+                                Text(getCurrentValue().asCurrencyWith6Decimals())
                             }
                         }
                         .animation(.none)
@@ -88,5 +88,12 @@ extension PortfolioView {
             .padding(.vertical, 4)
             .padding(.leading)
         })
+    }
+    
+    private func getCurrentValue() -> Double {
+        if let quantity = Double(quantityText) {
+            return quantity*(selectedCoin?.currentPrice ?? 0)
+        }
+        return 0
     }
 }
