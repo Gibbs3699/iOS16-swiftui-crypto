@@ -12,6 +12,7 @@ struct PortfolioView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var selectedCoin: CoinModel? = nil
     @State private var quantityText: String = ""
+    @State private var showCheckMark: Bool = false
     
     var body: some View {
         NavigationView {
@@ -29,6 +30,9 @@ struct PortfolioView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     XmarkButton()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    trailingNavBarButtons
                 }
             })
         }
@@ -99,6 +103,25 @@ extension PortfolioView {
         .animation(.none)
         .padding()
         .font(.headline)
+    }
+    
+    private var trailingNavBarButtons: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "checkmark")
+                .opacity(showCheckMark ? 1.0: 0.0)
+            
+            Button {
+                saveButtonPressed()
+            } label: {
+                Text("Save".uppercased())
+            }
+            .opacity(selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText) ? 1.0 : 0.0)
+        }
+        .font(.headline)
+    }
+    
+    private func saveButtonPressed() {
+        
     }
     
     private func getCurrentValue() -> Double {
