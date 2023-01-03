@@ -34,4 +34,34 @@ class PortfolioDataService {
             print("Error fetching portfolio entities. \(error)")
         }
     }
+    
+    private func add(coin: CoinModel, amount: Double) {
+        let entity = PortfolioEntity(context: container.viewContext)
+        entity.coinID = coin.id
+        entity.amount = amount
+        applyChanges()
+    }
+    
+    private func update(entity: PortfolioEntity, amount: Double) {
+        entity.amount = amount
+        applyChanges()
+    }
+    
+    private func delete(entity: PortfolioEntity) {
+        container.viewContext.delete(entity)
+        applyChanges()
+    }
+    
+    private func save() {
+        do {
+            try container.viewContext.save()
+        } catch let error {
+            print("Error saving to Core Data. \(error)")
+        }
+    }
+    
+    private func applyChanges() {
+        save()
+        getPortfolio()
+    }
 }
