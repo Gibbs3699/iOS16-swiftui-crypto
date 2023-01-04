@@ -10,12 +10,7 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     
-    @Published var statistics: [StatisticModel] = [
-        StatisticModel(title: "Title", value: "Value", percentageChange: 1),
-        StatisticModel(title: "Title", value: "Value"),
-        StatisticModel(title: "Title", value: "Value", percentageChange: -7),
-        StatisticModel(title: "Title", value: "Value")
-    ]
+    @Published var statistics: [StatisticModel] = []
     
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
@@ -24,6 +19,7 @@ class HomeViewModel: ObservableObject {
     
     private var coinDataService = CoinDataService()
     private var marketDataService = MarketDataService()
+    private var portfolioDataService = PortfolioDataService()
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -40,6 +36,22 @@ class HomeViewModel: ObservableObject {
                 self?.portfolioCoins = returnedCoins
             }
             .store(in: &cancellables)
+        
+        $allCoins
+            .combineLatest(portfolioDataService.$savedEntities)
+            .map { (coinModels, PortfolioEntities) -> [CoinModel] in coinModels
+                    .compactMap({ (coin) -> CoinModel? in
+                        guard let entity = PortfolioEntities.first(where: { $0.coinID == coin.id }) else {
+                            return nil
+                        }
+                        return coin.updateHolding(amount: entity.amount)
+                    })
+            }
+            .sink { [weak self] (returnedCoins) in
+                self?.portfolioCoins = returnedCoins
+            }
+            .store(in: &cancellables)
+        
         
         marketDataService.$marketData
             .map(mapGlobalMarketData)
