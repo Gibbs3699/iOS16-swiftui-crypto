@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PortfolioView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @EnvironmentObject private var vm: HomeViewModel
     @State private var selectedCoin: CoinModel? = nil
     @State private var quantityText: String = ""
@@ -29,18 +31,23 @@ struct PortfolioView: View {
             .navigationTitle("Edit Portfolio")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    XmarkButton()
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    } , label: {
+                        Image(systemName: "xmark")
+                            .font(.headline)
+                    })
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     trailingNavBarButtons
                 }
             })
+            .onChange(of: vm.searchText, perform: { value in
+                if value == "" {
+                    removeSelectedCoin()
+                }
+            })
         }
-        .onChange(of: vm.searchText, perform: { value in
-            if value == "" {
-                removeSelectedCoin()
-            }
-        })
     }
 }
 
