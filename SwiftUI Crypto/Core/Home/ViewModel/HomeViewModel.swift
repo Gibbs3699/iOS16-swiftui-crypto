@@ -11,11 +11,11 @@ import Combine
 class HomeViewModel: ObservableObject {
     
     @Published var statistics: [StatisticModel] = []
-    
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
-    
     @Published var searchText: String = ""
+    @Published var isLoading: Bool = false
+    
     
     private var coinDataService = CoinDataService()
     private var marketDataService = MarketDataService()
@@ -50,6 +50,7 @@ class HomeViewModel: ObservableObject {
             .map(mapGlobalMarketData)
             .sink { [weak self] (returnedStats) in
                 self?.statistics = returnedStats
+                self?.isLoading = false
             }
             .store(in: &cancellables)
 
