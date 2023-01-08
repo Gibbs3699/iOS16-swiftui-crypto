@@ -56,6 +56,13 @@ class HomeViewModel: ObservableObject {
 
     }
     
+    func reloadData() {
+        isLoading = true
+        coinDataService.getCoins()
+        marketDataService.getData()
+    }
+    
+    
     func updatePortfolio(coin: CoinModel, amount: Double) {
         portfolioDataService.updatePortfolio(coin: coin, amount: amount)
     }
