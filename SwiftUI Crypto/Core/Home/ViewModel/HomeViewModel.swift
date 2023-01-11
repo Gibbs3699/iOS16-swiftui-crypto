@@ -15,12 +15,16 @@ class HomeViewModel: ObservableObject {
     @Published var portfolioCoins: [CoinModel] = []
     @Published var searchText: String = ""
     @Published var isLoading: Bool = false
-    
+    @Published var sortOption: SortOption = .holding
     
     private var coinDataService = CoinDataService()
     private var marketDataService = MarketDataService()
     private var portfolioDataService = PortfolioDataService()
     private var cancellables = Set<AnyCancellable>()
+    
+    enum SortOption {
+        case rank, rankReversed, holding, holdingReversed, price, priceReversed
+    }
     
     init() {
         addSubscribers()
