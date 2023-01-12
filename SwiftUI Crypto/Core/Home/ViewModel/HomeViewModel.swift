@@ -67,9 +67,22 @@ class HomeViewModel: ObservableObject {
         HapticManager.notification(type: .success)
     }
     
-    private func filterAndSortCoin(text: String, coins: [CoinModel], sortOption: SortOption) -> [CoinModel] {
+    private func filterAndSortCoin(text: String, coins: [CoinModel], sort: SortOption) -> [CoinModel] {
         var updatedCoin = filterCoins(text: text, coins: coins)
         return updatedCoin
+    }
+    
+    private func sortedCoin(sort: SortOption, coins: inout [CoinModel]) {
+        switch sort {
+        case .rank, .holding:
+            coins.sort(by: { $0.rank < $1.rank })
+        case .rankReversed, .holdingReversed:
+            coins.sort(by: { $0.rank > $1.rank })
+        case .price:
+            coins.sort(by: { $0.currentPrice > $1.currentPrice })
+        case .priceReversed:
+            coins.sort(by: { $0.currentPrice < $1.currentPrice })
+        }
     }
     
     func updatePortfolio(coin: CoinModel, amount: Double) {
