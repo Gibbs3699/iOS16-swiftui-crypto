@@ -85,6 +85,17 @@ class HomeViewModel: ObservableObject {
         }
     }
     
+    private func sortPortfolioCoinsIfNeeded(coins: [CoinModel]) -> [CoinModel] {
+        switch sortOption {
+        case .holding:
+            return coins.sorted(by: { $0.currentHoldingValue > $1.currentHoldingValue })
+        case .holdingReversed:
+            return coins.sorted(by: { $0.currentHoldingValue < $1.currentHoldingValue })
+        default:
+            return coins
+        }
+    }
+    
     func updatePortfolio(coin: CoinModel, amount: Double) {
         portfolioDataService.updatePortfolio(coin: coin, amount: amount)
     }
