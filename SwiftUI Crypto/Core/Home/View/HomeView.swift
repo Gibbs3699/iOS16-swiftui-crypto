@@ -112,10 +112,17 @@ extension HomeView {
     
     private var columnTitles: some View {
         HStack {
-            Text("Coin")
-            Image(systemName: "chevron.down")
-                .opacity((vm.sortOption == .rank || vm.sortOption == .rankReversed) ? 1.0 : 0.0)
-                .rotationEffect(Angle(degrees: vm.sortOption == .rank ? 0 : 180))
+            HStack {
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .opacity((vm.sortOption == .rank || vm.sortOption == .rankReversed) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: vm.sortOption == .rank ? 0 : 180))
+            }
+            .onTapGesture {
+                withAnimation(.default) {
+                    vm.sortOption = vm.sortOption == .rank ? .rankReversed : .rank
+                }
+            }
             
             Spacer()
             if showPortfolio {
