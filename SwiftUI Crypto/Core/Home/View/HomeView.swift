@@ -112,7 +112,7 @@ extension HomeView {
     
     private var columnTitles: some View {
         HStack {
-            HStack {
+            HStack(spacing: 4) {
                 Text("Coin")
                 Image(systemName: "chevron.down")
                     .opacity((vm.sortOption == .rank || vm.sortOption == .rankReversed) ? 1.0 : 0.0)
@@ -126,7 +126,7 @@ extension HomeView {
             
             Spacer()
             if showPortfolio {
-                HStack {
+                HStack(spacing: 4) {
                     Text("Holdings")
                     Image(systemName: "chevron.down")
                         .opacity((vm.sortOption == .holding || vm.sortOption == .holdingReversed) ? 1.0 : 0.0)
@@ -139,7 +139,7 @@ extension HomeView {
                 }
             }
             
-            HStack {
+            HStack(spacing: 4) {
                 Text("Price")
                 Image(systemName: "chevron.down")
                     .opacity((vm.sortOption == .price || vm.sortOption == .priceReversed) ? 1.0 : 0.0)
