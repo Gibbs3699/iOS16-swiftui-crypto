@@ -127,7 +127,8 @@ extension HomeView {
     }
     
     private func segue(coin: CoinModel) {
-        
+        selectedCoin = coin
+        showDetailView.toggle()
     }
     
     private var columnTitles: some View {
