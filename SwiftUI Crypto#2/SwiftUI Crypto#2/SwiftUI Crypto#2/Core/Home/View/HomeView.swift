@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var showPortfolio: Bool = false
+    
     var body: some View {
         ZStack {
             Color.theme.background
                 .ignoresSafeArea()
             
             VStack {
-                Text("Header")
+                homeHeader
                 Spacer(minLength: 0)
             }
         }
@@ -24,5 +27,16 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+extension HomeView {
+    
+    private var homeHeader: some View {
+        CircleButtonView(iconName: showPortfolio ? "plus" : "info")
+            .animation(.none, value: 0.0)
+            .background(
+                CircleButtonAnimationView(animate: $showPortfolio)
+            )
     }
 }
