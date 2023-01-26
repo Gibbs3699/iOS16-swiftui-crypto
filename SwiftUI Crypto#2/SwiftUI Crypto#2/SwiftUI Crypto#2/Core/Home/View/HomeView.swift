@@ -33,10 +33,24 @@ struct HomeView_Previews: PreviewProvider {
 extension HomeView {
     
     private var homeHeader: some View {
-        CircleButtonView(iconName: showPortfolio ? "plus" : "info")
-            .animation(.none, value: 0.0)
-            .background(
-                CircleButtonAnimationView(animate: $showPortfolio)
+        HStack {
+            CircleButtonView(iconName: showPortfolio ? "plus" : "info")
+                .animation(.none, value: 0.0)
+                .background(
+                    CircleButtonAnimationView(animate: $showPortfolio)
             )
+            
+            Spacer()
+            
+            CircleButtonView(iconName: "chevron.right")
+                .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        showPortfolio.toggle()
+                    }
+                }
+        }
+        
+        
     }
 }
