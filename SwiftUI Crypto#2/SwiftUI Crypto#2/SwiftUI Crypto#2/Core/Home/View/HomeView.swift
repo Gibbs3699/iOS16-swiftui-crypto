@@ -42,6 +42,14 @@ extension HomeView {
             
             Spacer()
             
+            Text(showPortfolio ? "Portfolio" : "Live Prices")
+                .font(.headline)
+                .fontWeight(.heavy)
+                .foregroundColor(Color.theme.accent)
+                .animation(.none, value: 0.0)
+            
+            Spacer()
+            
             CircleButtonView(iconName: "chevron.right")
                 .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
                 .onTapGesture {
