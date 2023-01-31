@@ -69,7 +69,7 @@ class HomeViewModel: ObservableObject {
     }
     
     private func filterAndSortCoin(text: String, coins: [CoinModel], sort: SortOption) -> [CoinModel] {
-        var updatedCoin = filterCoins(text: text, coins: coins)
+        let updatedCoin = filterCoins(text: text, coins: coins)
         return updatedCoin
     }
     
