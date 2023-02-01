@@ -36,23 +36,29 @@ struct DetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                Text("")
-                    .frame(height: 150)
+            VStack {
+                Text(vm.coin.name)
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(Color.theme.accent)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 
-                overviewTitle
-                Divider()
-                overviewGrid
-                
-                additionalTitle
-                Divider()
-                additionalGrid
+                VStack(spacing: 20) {
+                    Text("")
+                        .frame(height: 200)
+                    
+                    overviewTitle
+                    Divider()
+                    overviewGrid
+                    
+                    additionalTitle
+                    Divider()
+                    additionalGrid
 
+                }
             }
             .padding()
         }
-        .navigationTitle(vm.coin.name)
-        .navigationBarTitleDisplayMode(.large)
     }
 }
 
