@@ -57,6 +57,24 @@ struct DetailView: View {
                             StatisticView(stat: StatisticModel(title: "Title", value: "Value"))
                         }
                     })
+                
+                Text("Additional Details")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(Color.theme.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Divider()
+                
+                LazyVGrid(
+                    columns: columns,
+                    alignment: .leading,
+                    spacing: spacing,
+                    pinnedViews: [],
+                    content: {
+                        ForEach(0..<6) { _ in
+                            StatisticView(stat: StatisticModel(title: "Title", value: "Value"))
+                        }
+                    })
             }
             .padding()
         }
