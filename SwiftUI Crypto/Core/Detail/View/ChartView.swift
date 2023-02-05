@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ChartView: View {
     
-    let data: [Double]
+    private let data: [Double]
+    private let minY: Double
+    private let maxY: Double
     
     init(coin: CoinModel) {
         data = coin.sparklineIn7D?.price ?? []
+        minY = data.min() ?? 0
+        maxY = data.max() ?? 0
     }
     
     var body: some View {
