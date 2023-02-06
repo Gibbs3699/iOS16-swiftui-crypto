@@ -12,11 +12,14 @@ struct ChartView: View {
     private let data: [Double]
     private let minY: Double
     private let maxY: Double
+    private let lineColor: Color
     
     init(coin: CoinModel) {
         data = coin.sparklineIn7D?.price ?? []
         minY = data.min() ?? 0
         maxY = data.max() ?? 0
+        let priceChange = (data.last ?? 0) - (data.first ?? 0)
+        lineColor = priceChange > 0 ? Color.theme.green : Color.theme.red
     }
     
     var body: some View {
@@ -36,7 +39,7 @@ struct ChartView: View {
                     path.addLine(to: CGPoint(x: xPosition, y: yPosition))
                 }
             }
-            .stroke(Color.blue, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+            .stroke(lineColor, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
         }
     }
 }
