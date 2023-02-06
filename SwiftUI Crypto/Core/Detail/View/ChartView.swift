@@ -23,6 +23,13 @@ struct ChartView: View {
     }
     
     var body: some View {
+        chartView
+    }
+}
+
+extension ChartView {
+    
+    private var chartView: some View {
         GeometryReader { geometry in
             Path { path in
                 for index in data.indices {
