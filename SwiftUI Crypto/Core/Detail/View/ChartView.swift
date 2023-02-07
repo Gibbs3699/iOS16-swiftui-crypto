@@ -49,7 +49,7 @@ extension ChartView {
                     path.addLine(to: CGPoint(x: xPosition, y: yPosition))
                 }
             }
-            .stroke(lineColor, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+            .stroke(lineColor, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
         }
     }
     
