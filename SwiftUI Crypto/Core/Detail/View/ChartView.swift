@@ -15,6 +15,7 @@ struct ChartView: View {
     private let lineColor: Color
     private let startingDate: Date
     private let endingDate: Date
+    @State private var percentage: CGFloat = 0
     
     init(coin: CoinModel) {
         data = coin.sparklineIn7D?.price ?? []
@@ -35,9 +36,17 @@ struct ChartView: View {
             .overlay(chartYAxis, alignment: .leading)
             
             chartDateLabel
+                .padding(.horizontal, 4)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                withAnimation(.linear(duration: 3.0)) {
+                    percentage = 1.0
+                }
+            }
+        }
     }
 }
 
@@ -60,7 +69,13 @@ extension ChartView {
                     path.addLine(to: CGPoint(x: xPosition, y: yPosition))
                 }
             }
+            .trim(from: 0, to: percentage)
             .stroke(lineColor, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+            .shadow(color: lineColor, radius: 10, x: 0.0, y: 10)
+            .shadow(color: lineColor.opacity(0.5), radius: 10, x: 0.0, y: 10)
+            .shadow(color: lineColor.opacity(0.2), radius: 10, x: 0.0, y: 10)
+            .shadow(color: lineColor.opacity(0.1), radius: 10, x: 0.0, y: 10)
+        
         }
     }
     

@@ -27,7 +27,7 @@ struct DetailView: View {
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-    private let spacing: CGFloat = 30
+    private let spacing: CGFloat = 15
     
     init(coin: CoinModel) {
         _vm = StateObject(wrappedValue: DetailViewModel(coin: coin))
@@ -43,14 +43,12 @@ struct DetailView: View {
                     .foregroundColor(Color.theme.accent)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
-                VStack(spacing: 20) {
-                    Text("")
-                        .frame(height: 200)
-                    
+                VStack(spacing: 15) {
+                    ChartView(coin: vm.coin)
+                        .padding(.vertical)
                     overviewTitle
                     Divider()
                     overviewGrid
-                    
                     additionalTitle
                     Divider()
                     additionalGrid
@@ -59,6 +57,7 @@ struct DetailView: View {
             }
             .padding()
         }
+        .navigationBarTitle(vm.coin.name)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 navigationBarTrailingItems
