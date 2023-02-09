@@ -47,6 +47,12 @@ struct DetailView: View {
                     ChartView(coin: vm.coin)
                         .padding(.vertical)
                     overviewTitle
+                    
+                    ZStack {
+                        if let coinDescription = vm.coinDescription, !coinDescription.isEmpty {
+                            Text(coinDescription)
+                        }
+                    }
                     Divider()
                     overviewGrid
                     additionalTitle
