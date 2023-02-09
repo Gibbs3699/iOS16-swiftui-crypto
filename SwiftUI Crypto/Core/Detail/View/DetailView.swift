@@ -50,7 +50,7 @@ struct DetailView: View {
                     
                     ZStack {
                         if let coinDescription = vm.coinDescription, !coinDescription.isEmpty {
-                            Text(coinDescription.removeHTMLOccuurances)
+                            Text(coinDescription)
                         }
                     }
                     Divider()
