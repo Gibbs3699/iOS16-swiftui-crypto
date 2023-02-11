@@ -19,6 +19,7 @@ struct SettingView: View {
             List() {
                 personalSection
                 coinGeckoSection
+                applicationSection
             }
             .font(.headline)
             .accentColor(.blue)
@@ -69,6 +70,15 @@ extension SettingView {
             }
             .padding(.vertical)
             Link("Visit CoinGecko 😆", destination: githublURL)
+        }
+    }
+    
+    private var applicationSection: some View {
+        Section(header: Text("Application")) {
+            Link("Terms of Service", destination: defaultURL)
+            Link("Privacy Policy", destination: defaultURL)
+            Link("Company Webiste", destination: defaultURL)
+            Link("Learn More", destination: defaultURL)
         }
     }
     
