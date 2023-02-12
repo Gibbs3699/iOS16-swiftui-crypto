@@ -24,6 +24,8 @@ struct SwiftUI_CryptoApp: App {
                     .navigationBarHidden(true)
             }
             .environmentObject(vm)
+            
+            LaunchView()
         }
     }
 }
