@@ -155,7 +155,6 @@
 				DC04C5B3292E636B00ADC87C /* PreviewProvider.swift */,
 				DC04C5B7292FBB2C00ADC87C /* Double.swift */,
 				DCFE6E48294776D700C4F23E /* UIApplication.swift */,
-				DC9CF299296DC2CE00F41657 /* HapticManager.swift */,
 				DC9CF2BA299232E400F41657 /* Date.swift */,
 				DCB57E4F299514B500316A8E /* String.swift */,
 			);
@@ -321,6 +320,7 @@
 			children = (
 				DCFE6E1E2939FA4100C4F23E /* NetworkingManager.swift */,
 				DCFE6E412940F32500C4F23E /* LocalFileManager.swift */,
+				DC9CF299296DC2CE00F41657 /* HapticManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
