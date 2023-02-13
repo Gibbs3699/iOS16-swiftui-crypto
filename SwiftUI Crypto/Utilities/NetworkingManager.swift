@@ -26,6 +26,7 @@ class NetworkingManager {
         return URLSession.shared.dataTaskPublisher(for: url)
 //            .subscribe(on: DispatchQueue.global(qos: .default)) app will handle this
             .tryMap( { try handleURLResponse(output: $0, url: url)})
+            .retry(3)
             .eraseToAnyPublisher()
     }
     
