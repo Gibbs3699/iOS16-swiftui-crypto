@@ -20,19 +20,21 @@ struct SwiftUI_CryptoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                HomeView()
-                    .navigationBarHidden(true)
-            }
-            .environmentObject(vm)
-            
             ZStack {
-                if showLaunchView {
-                    LaunchView(showLaunchView: $showLaunchView)
-                        .transition(.move(edge: .leading))
+                NavigationView {
+                    HomeView()
+                        .navigationBarHidden(true)
                 }
+                .environmentObject(vm)
+                
+                ZStack {
+                    if showLaunchView {
+                        LaunchView(showLaunchView: $showLaunchView)
+                            .transition(.move(edge: .leading))
+                    }
+                }
+                .zIndex(2.0)
             }
-            .zIndex(2.0)
         }
     }
 }
