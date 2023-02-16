@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     let defaultURL = URL(string: "https://www.google.com")!
     let youtubeURL = URL(string: "https://www.youtube.com")!
     let githublURL = URL(string: "https://github.com/Gibbs3699/iOS16-swiftui-crypto")!
@@ -30,7 +32,12 @@ struct SettingView: View {
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    XmarkButton()
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    } , label: {
+                        Image(systemName: "xmark")
+                            .font(.headline)
+                    })
                 }
             }
         }
