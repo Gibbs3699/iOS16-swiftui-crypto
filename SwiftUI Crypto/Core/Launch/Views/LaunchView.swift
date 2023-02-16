@@ -23,9 +23,9 @@ struct LaunchView: View {
             Color.launch.background
                 .ignoresSafeArea()
             
-            Image("logo-transparent")
-                .resizable()
-                .frame(width: 100, height: 100)
+            LottieView(lottieFile: "crypto-coins", loopMode: .loop)
+                .frame(width: 200, height: 200)
+                
             
             ZStack {
                 if showLoadingText {
